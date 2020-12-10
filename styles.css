@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace;
+    background: snow;
+    width: 100%;
+    height: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header {
+    margin-top: 10%;
+    text-align: center;
+}
+header h1 {
+    font-size: 2.5em;
+}
+header p {
+    font-size: 1.25em;
+    margin-top: 5%;
+}
+.converter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2.5%;
+}
+.fahrenheit,
+.celsius {
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    text-align: center;
+}
+.converter input {
+    cursor: pointer;
+    width: 30%;
+}
