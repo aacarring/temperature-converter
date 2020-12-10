@@ -4,14 +4,15 @@ const celsiusInput = document.querySelector('.celsius input');
 const inputs = document.querySelectorAll('input');
 
 function updateTemps() {
-    let fahrenheitTemp = parseFloat(fahrenheitInput.value).toFixed(2);
-    let celsiusTemp = parseFloat(celsiusInput.value).toFixed(2);
-
-    celsiusTemp = (5/9) * (fahrenheitTemp - 32);
-    fahrenheitTemp = celsiusTemp * (9 / 5) + 32;
-
-    console.log(fahrenheitTemp, celsiusTemp);
+    let value = parseFloat(this.value).toFixed(2);
     
+    if (isNaN(value)) return;
+
+    if (this.classList.contains('fahrenheit')) {
+        celsiusInput.value = (value * 1.8) + 32;
+    } else {
+        fahrenheitInput.value = (value - 32) / 1.8;
+    }
 }
 
 inputs.forEach(input => input.addEventListener('input', updateTemps));
